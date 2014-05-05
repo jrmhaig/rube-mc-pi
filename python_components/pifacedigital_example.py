@@ -33,8 +33,11 @@ def trigger_output():
     """ Output trigger
 
     This function must carry out the work of this step and trigger the output.
-    For this example, the 'work' is choosing random numbers until the correct
-    value if chosen. The output trigger is the message "Continue!"
+    For this example, the work is to start counting at 0 and then at each step
+    count up by one with a probability of 51% or down by one with a probability
+    of 49%. The number is displayed as binary on the PiFace output LEDs in
+    reverse order so that the relay attached to LED 0 is turned on when the
+    count reaches 128.
 
     """
     target = 128
